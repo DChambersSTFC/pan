@@ -39,7 +39,7 @@ import org.quattor.pan.utils.TermFactory;
 @Immutable
 public class StringProperty extends Property implements Term {
 
-	protected StringProperty(String value) {
+	public StringProperty(String value) {
 		super(value);
 	}
 
