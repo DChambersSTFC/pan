@@ -6,7 +6,7 @@ object template append1;
 
 '/x' = {
   x[0] = 1;
-  x = push();
+  x = push(2);
 };
 
 '/result' = {
