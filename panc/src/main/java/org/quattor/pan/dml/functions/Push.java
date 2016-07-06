@@ -30,7 +30,6 @@ final public class Push extends BuiltInFunction {
 
     public static Operation getInstance(SourceRange sourceRange,
             Operation... operations) throws SyntaxException {
-
         // Ensure that there is at least one argument.
         if (operations.length == 0) {
             throw SyntaxException.create(sourceRange, MSG_ONE_OR_MORE_ARG_REQ,
@@ -44,7 +43,7 @@ final public class Push extends BuiltInFunction {
 			modifiedOps[0] = ListVariable.getInstance(sourceRange, "SELF");
 			modifiedOps[1] = operations[0];
                         
-		return new Append(sourceRange, modifiedOps);
+		return new Push(sourceRange, modifiedOps);
     }
 
     @Override
