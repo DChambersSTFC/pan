@@ -39,9 +39,12 @@ final public class Push extends BuiltInFunction {
         // Create the appropriate list of operations. The raw operations cannot
 		// be used because the variable must be turned into a ListVariable
 		// operation.
-		Operation[] modifiedOps = new Operation[2];
+		Operation[] modifiedOps = new Operation[operations.length];
 			modifiedOps[0] = ListVariable.getInstance(sourceRange, "SELF");
-			modifiedOps[1] = operations[0];
+                        
+                        for (int i = 1;i < operations.length;i++) {
+                            modifiedOps[1] = operations[i-1];
+                        }
                         
 		return new Push(sourceRange, modifiedOps);
     }
