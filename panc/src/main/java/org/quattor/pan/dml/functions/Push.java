@@ -76,7 +76,7 @@ final public class Push extends BuiltInFunction {
                 if (element == args[1]) {
                     listType = element.getTypeAsString();
                     result.append(element);
-                } else if (element.getTypeAsString().equals(listType)) {
+                } else if (element.getTypeAsString().equals(listType)) {   
                     result.append(element);
                 } else {
                     throw new EvaluationException("The type of the element did not match the other items in the list.", getSourceRange(), context);

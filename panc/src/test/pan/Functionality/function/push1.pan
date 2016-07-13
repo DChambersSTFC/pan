@@ -8,7 +8,7 @@ object template push1;
   x[0] = 1;
   x[1] = 2;
   x[2] = 3;
-  x = push(4,5,6);
+  x = push(x[0],x[1],x[2],4,5,6);
 };
 
 '/result' = {
