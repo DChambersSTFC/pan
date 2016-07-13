@@ -2,14 +2,16 @@
 # @expect="/nlist[@name='profile']/boolean[@name='result']='true'"
 # @format=pan
 #
-object template append1;
+object template push1;
 
 '/x' = {
   x[0] = 1;
-  x = push(2);
+  x[1] = 2;
+  x[2] = 3;
+  x = push(4,5,6);
 };
 
 '/result' = {
   x = value('/x');
-  (length(x) == 2 && x[1] == 2);
+  (length(x) == 6 && x[3] == 4);
 };
